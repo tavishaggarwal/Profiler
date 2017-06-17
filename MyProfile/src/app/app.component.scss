@@ -1,0 +1,23 @@
+.menu {
+    z-index: 6;
+    position: absolute ;
+    right: 0;
+    top: 40px;
+    margin-right: 24px;
+    color: #fff;
+    ul li {
+        display: inline-block;
+        font-size: 18px;
+        padding: 0 24px 0 24px;
+    }
+}
+
+a:link { 
+    color: #fff;
+    text-decoration: none;
+} 
+
+a:visited { 
+    color: #fff;
+    text-decoration: none;
+} 
