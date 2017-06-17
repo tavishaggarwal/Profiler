@@ -2,7 +2,7 @@
 
 This site is quick introduction about myself. To view site open: 
 ```
-https://tavishaggarwal.github.io/
+https://tavishaggarwal.github.io/Profiler/
 ```
 
 ## Getting Started

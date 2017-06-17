@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as jQuery from 'jquery';
 
 @Component({
   selector: 'profile-about-us',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor() { $('body').removeClass('backgroundImage').addClass('backgroundStyle');
+}
 
   ngOnInit() {
   }
