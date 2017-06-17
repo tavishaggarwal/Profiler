@@ -6,53 +6,6 @@
     font-size: 30px;
 }
 
-#bodyWrapper{
-    z-index: 2;
-    width: 69%; /* TODO: Chnage width to 69% */
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: left center;
-    background-repeat: no-repeat;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -ms-transition: 0.2s;
-    transition: 0.2s;
-    .intro {
-        position: absolute;
-        bottom: 50px;
-        left: 40px;
-        z-index: 4;
-        
-        h1 span {
-            display: block;
-            color: #fff;
-            margin: 0 0 20px 0;
-            font-weight: 300;
-            font-size: 50px;
-            line-height: 62px;
-        }
-    }
-    .overlay {
-        background: #368BC1;
-        opacity: .7;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-}
-
-#portfolio {
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .align {
     margin: 16px;
     font-size: 24px;
@@ -78,10 +31,13 @@
     -webkit-transition: 0.2s;
     -ms-transition: 0.2s;
     transition: 0.2s;
+    background-color: white;
 }
 
 .backgroundImage {
-    background-image: url("assets/FullStack.jpg");
+    background-image: url("assets/FullStack.png");
+        background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -111,29 +67,11 @@
     animation-fill-mode: both;
 }
 
-#toggle {
-    position: absolute;
-    top: 35px;
-    left: 40px;
-    z-index: 6;
-    a .glyphicon {
-        color: #fff;
-        z-index: 6;
-    }
-}
-
-
 .showaside {
     width: 100% !important;
     z-index: 6;
 }
 
-.header {
-    position: absolute;
-    right:0;
-    width: 100%;
-    z-index: 2;
-    height: 92px;
-    background: #0099CC;
-    opacity: 0.9;
+.positioning {
+    top: 92px;
 }

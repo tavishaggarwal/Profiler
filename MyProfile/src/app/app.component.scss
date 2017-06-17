@@ -1,23 +1,50 @@
 .menu {
-    z-index: 6;
-    position: absolute ;
+ul {
+        position: absolute;
+    top: 11px;
     right: 0;
-    top: 40px;
-    margin-right: 24px;
-    color: #fff;
+}
     ul li {
         display: inline-block;
         font-size: 18px;
         padding: 0 24px 0 24px;
     }
 }
+.menu {
+    a:link { 
+        color: #fff;
+        text-decoration: none;
+    } 
 
-a:link { 
-    color: #fff;
-    text-decoration: none;
-} 
+    a:visited { 
+        color: #fff;
+        text-decoration: none;
+    } 
+}
 
-a:visited { 
-    color: #fff;
-    text-decoration: none;
-} 
+#toggle {
+    position: absolute;
+    width: 69%;
+    right: 0;
+    z-index: 8;
+    top: 38px;
+    padding-left: 16px;
+    a .glyphicon {
+        color: #fff;
+        z-index: 6;
+    }
+}
+
+.header {
+    position: absolute;
+    right:0;
+    width: 100%;
+    z-index: 3;
+    height: 92px;
+    background: #0099CC;
+    opacity: 0.9;
+}
+
+.body {
+    padding-top: 98px;
+}

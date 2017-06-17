@@ -1,14 +1,22 @@
 <!--The whole content below can be removed with the new code.-->
+<header> 
+<div id="toggle" class="js-toggle to-animate-single fadeInUp animated">
+        <a href="#bodyWrapper">
+          <span (click)= "toggle()" class="glyphicon glyphicon-unchecked"></span>
+        </a>
+      </div>
+    <span id="header" class="menu hide"><!-- TO DO : Add class hide -->
+        <ul>
+            <li (click) = "adjustWidth()"><a [routerLink] ="['/']">Home</a></li>
+            <li><a [routerLink] ="['/About']">About</a></li>
+            <li (click) = "adjustWidth()"><a [routerLink] ="['/']">Featured</a></li>
+            <li (click) = "adjustWidth()"><a [routerLink] ="['/']">Portfolio</a></li>
+            <li (click) = "adjustWidth()"><a [routerLink] ="['/']">Blogs</a></li>
+            <li (click) = "adjustWidth()"><a [routerLink] ="['/']">Contacts</a></li>
+        </ul>
+    </span>
+</header>
 
-<span class="menu">
-    <ul>
-        <li><a [routerLink] ="['/Home']">Home</a></li>
-        <li><a [routerLink] ="['/About']">About</a></li>
-        <li><a [routerLink] ="['/Home']">Featured</a></li>
-        <li><a [routerLink] ="['/Home']">Portfolio</a></li>
-        <li><a [routerLink] ="['/Home']">Blogs</a></li>
-        <li><a [routerLink] ="['/Home']">Contacts</a></li>
-    </ul>
-</span>
-
-<router-outlet></router-outlet>
+<div class="body">
+    <router-outlet></router-outlet>
+</div>
