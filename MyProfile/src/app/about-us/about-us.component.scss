@@ -1,0 +1,23 @@
+.about {
+    color:rgb(102, 102, 102);
+    .aboutHeading {
+        font-size: 7rem;
+        
+    }
+
+    .intro {
+        font-size: 2.6rem;
+        color:rgb(102, 102, 102);
+    }
+    .description {
+        font-size:18px;
+    }
+    .profile {
+        width: 550px;
+        float: right;
+    }
+}
+
+.line {
+    border-top: #dddddd 1px solid;
+}

@@ -8,7 +8,8 @@ import * as jQuery from 'jquery';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { $('body').removeClass('backgroundImage').addClass('backgroundStyle');
+  constructor() {
+    $('body').removeClass('backgroundImage').addClass('backgroundStyle');
 }
 
   ngOnInit() {

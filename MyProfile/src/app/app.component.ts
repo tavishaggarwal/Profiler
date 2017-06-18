@@ -11,11 +11,12 @@ export class AppComponent {
 
  toggle () {
     $('#bodyWrapper').toggleClass('showaside backgroundImage');
-    $('#toggle').toggleClass('showaside');
+    $('#toggle').toggleClass('showasideToggle');
     $('#menu').toggleClass('hide');
     $('#header').toggleClass('header hide');
     $('#bio').toggleClass('hide');
-    $('body').addClass('backgroundImage');
+    $('body').toggleClass('backgroundImage');
+    $('.container').toggleClass('hide');
  }
 
  adjustWidth () {

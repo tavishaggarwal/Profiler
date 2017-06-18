@@ -16,6 +16,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Angular2](https://angular.io/) - The web framework used
+* [Animate CSS](https://github.com/daneden/animate.css) - The css framework used
 
 ## Contributing
 
