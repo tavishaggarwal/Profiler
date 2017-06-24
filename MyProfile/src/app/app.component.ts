@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import * as jQuery from 'jquery';
 
 @Component({
@@ -7,7 +7,7 @@ import * as jQuery from 'jquery';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
  toggle () {
     $('#bodyWrapper').toggleClass('showaside backgroundImage');
@@ -19,8 +19,19 @@ export class AppComponent {
     $('.container').toggleClass('hide');
  }
 
+ toggleRefresh () {
+   if ('/Home' !== window.location.pathname) {
+    $('#bio').toggleClass('hide');
+    $('#toggle').toggleClass('showasideToggle');
+    $('#header').toggleClass('header hide');
+   }
+ }
  adjustWidth () {
    $('#bodyWrapper').addClass('showaside backgroundImage');
  }
+
+   ngAfterViewInit() {
+    this.toggleRefresh();
+  }
 }
 

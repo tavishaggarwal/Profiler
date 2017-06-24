@@ -1,14 +1,51 @@
 <div class="container about">
     <div class="row">
         <div class="col-md-6">
-            <h1 class="aboutHeading fadeInUp animated">about me</h1>
-            <p class="intro fadeInUp animated">I'm a Front End Developer working in Hyderabad, India.</p>
+            <h1 class="heading fadeInUp animated">about me</h1>
+            <p class="subHeading fadeInUp animated">I'm a Front End Developer working in Hyderabad, India.</p>
             <p class="description fadeInUp animated">I enjoy turning complex problems into simple. 
                 When I'm not coding or not solving Hacker Rank, you'll find me eating. I am a big Foodieeee.</p>
         </div>
         <div class="col-md-6">
-            <img id="profile" src="./assets/profile.png" alt="Profile Image" class="profile fadeInRight animated"/>
+            <img id="profile" src="./assets/profile.png" alt="Profile Image" class="image fadeInRight animated"/>
         </div>
     </div>
     <div class="line"></div>
+    <div class="padder"></div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <img src="./assets/WorldInsight.png" alt="Profile Image" class="image fadeInLeft animated"/>
+        </div>
+        <div class="col-md-6">
+            <h1 class="heading fadeInUp animated">World Insight</h1>
+            <p class="subHeading fadeInUp animated">An Idea on which I am working on</p>
+            <p class="description fadeInUp animated">Site where people collaborate to help others. To know more, please
+                visit: <a href="https://worldinsight.mybluemix.net/" target="_blank">WorldInsight</a>
+            </p>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="padder"></div>
+    
+        <div class="row">
+        <div class="col-md-8">
+            <h1 class="heading fadeInUp animated">Technical skills</h1>
+            <ul class="description skillAlign">
+                 <li *ngFor="let skill of skills | slice:0:6">
+                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img"/>
+                     {{skill.name}}
+                </li>
+            </ul>
+            <ul class="description">
+                 <li *ngFor="let skill of skills | slice:7:13">
+                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img"/>
+                     {{skill.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img id="skillsImage" src="./assets/Skills.png" alt="Profile Image" class="image animated"/>
+        </div>
+    </div>
 </div>
