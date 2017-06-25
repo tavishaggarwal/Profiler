@@ -20,12 +20,15 @@ export class AppComponent implements AfterViewInit {
  }
 
  toggleRefresh () {
-   if ('/Home' !== window.location.pathname) {
-    $('#bio').toggleClass('hide');
-    $('#toggle').toggleClass('showasideToggle');
-    $('#header').toggleClass('header hide');
+   if ('/Home' !== window.location.pathname ) {
+     if ('/' !== window.location.pathname ) {
+        $('#bio').toggleClass('hide');
+        $('#toggle').toggleClass('showasideToggle');
+        $('#header').toggleClass('header hide');
+     }
    }
  }
+
  adjustWidth () {
    $('#bodyWrapper').addClass('showaside backgroundImage');
  }

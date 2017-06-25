@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import * as jQuery from 'jquery';
+import { Component, AfterViewInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
-  selector: 'profile-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss']
+  moduleId: module.id,
+  templateUrl: 'about-us.component.html',
+  styleUrls: ['about-us.component.scss']
 })
-export class AboutUsComponent implements OnInit {
+export class AboutUsComponent implements AfterViewInit {
 
     skills = [
         {img: './assets/HTML_Logo.png', name: 'HTML'},
@@ -25,15 +25,14 @@ export class AboutUsComponent implements OnInit {
     ];
 
   constructor() {
-    $('body').removeClass('backgroundImage').addClass('backgroundStyle');
 }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+     // Toggling background image on moving to About page
+     $('body').removeClass('backgroundImage').addClass('backgroundStyle');
+
     $(window).scroll(function (event) {
-      const scroll = $(window).scrollTop();
-      $('#skillsImage').addClass('fadeInRight'
-      );
+      $('#skillsImage').addClass('fadeInRight');
     });
   }
-
 }
