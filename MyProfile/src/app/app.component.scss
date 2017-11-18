@@ -24,7 +24,7 @@ ul {
 
 #toggle {
     position: absolute;
-    width: 69%;
+    left: 31%;
     right: 0;
     z-index: 8;
     top: 38px;
@@ -47,4 +47,43 @@ ul {
 
 .body {
     padding-top: 98px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+    .icon-bar {
+        background: #fff;
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 18px;
+}
+div#bs-example-navbar-collapse-1  {
+    background: #0099CC;
+} 
+
+@media (min-width: 768px) {
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+}
+
+.navbar {
+    border: 0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #0099CC;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #0099CC;
+}
+#menu .container-fluid {
+    top:30px;
+    right: 10px;
+    position: absolute;
 }

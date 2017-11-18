@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as $ from 'jquery';
+import * as globalsFunc from './../functions';
 
 @Component({
   moduleId: module.id,
@@ -28,11 +29,22 @@ export class AboutUsComponent implements AfterViewInit {
 }
 
   ngAfterViewInit() {
+    const functions = new globalsFunc.Functions();
      // Toggling background image on moving to About page
      $('body').removeClass('backgroundImage').addClass('backgroundStyle');
 
-    $(window).scroll(function (event) {
-      $('#skillsImage').addClass('fadeInRight');
-    });
+     $(window).scroll(function (event) {
+            if (functions.IsInViewport(document.getElementById('profile'))) {
+              $('#profile').addClass('fadeInLeft');
+            }
+
+            if (functions.IsInViewport(document.getElementById('worldInsight'))) {
+              $('#worldInsight').addClass('fadeInLeft');
+            }
+
+            if (functions.IsInViewport(document.getElementById('skillsImage'))) {
+              $('#skillsImage').addClass('fadeInLeft');
+            }
+          });
   }
 }

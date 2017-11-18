@@ -11,6 +11,9 @@
     }
     .description {
         font-size:18px;
+        li {
+            padding-bottom: 15px;
+        }
     }
     .image {
         width: 550px;
@@ -37,10 +40,22 @@
 
 .skillAlign {
     float: left;
-    padding-left: 0;
     margin-right: 25px;
+    
 }
 
 .textAlign {
     text-align: center;
 }
+
+@media only screen and (max-width: 1024px) {
+    .technicalSkills {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+  }

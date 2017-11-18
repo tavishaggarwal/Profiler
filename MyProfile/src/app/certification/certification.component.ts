@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import * as globalsFunc from './../functions';
 
 @Component({
   selector: 'profile-certification',
   templateUrl: './certification.component.html',
   styleUrls: ['./certification.component.scss']
 })
-export class CertificationComponent implements OnInit {
+export class CertificationComponent implements AfterViewInit {
 edx = [
   {name: 'Querying with Transact SQL', owner: 'Microsoft'},
   {name: 'Introduction to Computer Science', owner: 'Harvard'},
@@ -32,11 +33,25 @@ pluralsight = [
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
   ngAfterViewInit() {
+    const functions = new globalsFunc.Functions();
+
      // Toggling background image on moving to About page
      $('body').removeClass('backgroundImage').addClass('backgroundStyle');
+
+     $(window).scroll(function (event) {
+
+      if (functions.IsInViewport(document.getElementById('pluralsight'))) {
+        $('#pluralsight').addClass('fadeInLeft');
+      }
+
+      if (functions.IsInViewport(document.getElementById('edx'))) {
+        $('#edx').addClass('fadeInLeft');
+      }
+
+      if (functions.IsInViewport(document.getElementById('coursera'))) {
+        $('#coursera').addClass('fadeInLeft');
+      }
+    });
   }
 }

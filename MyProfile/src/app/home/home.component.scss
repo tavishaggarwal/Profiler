@@ -14,7 +14,7 @@
     .intro {
         position: absolute;
         bottom: 50px;
-        left: 40px;
+        left: 25px;
         z-index: 4;
         
         h1 span {
@@ -33,3 +33,12 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@media only screen and (max-width: 1024px) {
+    .mobileHide {
+        
+    }
+    #portfolio .intro {
+        top: 15%;
+    }
+  }

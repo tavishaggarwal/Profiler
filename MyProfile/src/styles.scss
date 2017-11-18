@@ -98,7 +98,11 @@
     animation-fill-mode: both;
 }
 
-.showaside, .showasideToggle {
+.showasideToggle  {
+  left:0 !important;
+  width: 0;
+}
+.showaside{
     width: 100% !important;
     z-index: 6;
 }
@@ -113,4 +117,24 @@
 
 .padder {
   margin-top: 55px;
+}
+
+ @media only screen and (max-width: 1024px) {
+  #bio {
+    top: 34%;
+    width: 100%;
+    z-index: 10;
+  }
+  #bodyWrapper {
+    width: 100% !important;
+    max-height: 220%;
+    overflow-y: scroll;
+  }
+  #toggle {
+    left: 2% !important;
+  }
+  .backgroundImage {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

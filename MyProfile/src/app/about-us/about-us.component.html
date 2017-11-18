@@ -1,5 +1,5 @@
 <div class="container about">
-    <div class="row">
+    <div class="row aboutMe">
         <div class="col-md-6">
             <h1 class="heading fadeInUp animated">about me</h1>
             <p class="subHeading fadeInUp animated">I'm a Front End Developer working in Hyderabad, India.</p>
@@ -7,7 +7,7 @@
                 When I'm not coding or not solving Hacker Rank, you'll find me eating. I am a big Foodieeee.</p>
         </div>
         <div class="col-md-6">
-            <img id="profile" src="./assets/profile.png" alt="Profile Image" class="image fadeInRight animated"/>
+            <img id="profile" src="./assets/profile.png" alt="Profile Image" class="image fadeInLeft animated img-responsive"/>
         </div>
     </div>
     <div class="line"></div>
@@ -15,7 +15,7 @@
     
     <div class="row">
         <div class="col-md-6">
-            <img src="./assets/WorldInsight.png" alt="Profile Image" class="image fadeInLeft animated"/>
+            <img src="./assets/WorldInsight.png" alt="Profile Image" class="image fadeInLeft animated img-responsive" id="worldInsight"/>
         </div>
         <div class="col-md-6">
             <h1 class="heading fadeInUp animated">World Insight</h1>
@@ -28,24 +28,24 @@
     <div class="line"></div>
     <div class="padder"></div>
     
-        <div class="row">
+        <div class="row technicalSkills">
         <div class="col-md-8">
             <h1 class="heading fadeInUp animated">Technical skills</h1>
             <ul class="description skillAlign">
                  <li *ngFor="let skill of skills | slice:0:6">
-                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img"/>
+                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img img-responsive"/>
                      {{skill.name}}
                 </li>
             </ul>
             <ul class="description">
                  <li *ngFor="let skill of skills | slice:7:13">
-                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img"/>
+                     <img [src]= "skill.img" alt="skill.name" class="thumbnail-img img-responsive"/>
                      {{skill.name}}
                 </li>
             </ul>
         </div>
         <div class="col-md-4">
-            <img id="skillsImage" src="./assets/Skills.png" alt="Profile Image" class="image animated"/>
+            <img id="skillsImage" src="./assets/Skills.png" alt="Profile Image" class="image animated img-responsive"/>
         </div>
     </div>
 </div>

@@ -25,16 +25,31 @@ export class AppComponent implements AfterViewInit {
         $('#bio').toggleClass('hide');
         $('#toggle').toggleClass('showasideToggle');
         $('#header').toggleClass('header hide');
+        $('#menu').toggleClass('hide');
      }
    }
  }
 
+ closeNavbar () {
+  $(function() {
+      const navMain = $('.navbar-collapse');
+
+      navMain.on('click', 'a:not([data-toggle])', null, function () {
+          (<any>navMain).collapse('hide');
+      });
+
+      $('body').on('click', function () {
+        (<any>navMain).collapse('hide');
+      });
+  });
+}
  adjustWidth () {
    $('#bodyWrapper').addClass('showaside backgroundImage');
  }
 
    ngAfterViewInit() {
     this.toggleRefresh();
+    this.closeNavbar();
   }
 }
 
