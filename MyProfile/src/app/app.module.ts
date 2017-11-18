@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FormsModule } from '@angular/forms';
 import { CertificationComponent } from './certification/certification.component';
 import { ContactComponent } from './contact/contact.component';
+import { JourneyComponent } from './journey/journey.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutUsComponent,
     HomeComponent,
     CertificationComponent,
-    ContactComponent
+    ContactComponent,
+    JourneyComponent
   ],
   imports: [
     BrowserModule,
