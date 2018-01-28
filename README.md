@@ -2,7 +2,7 @@
 
 This site is quick introduction about myself. To view site open: 
 ```
-https://tavishaggarwal.github.io/Profiler/
+https://tavishaggarwal.com/
 ```
 
 ## Getting Started
@@ -11,7 +11,12 @@ This site gives insight of who I am and what are the skill sets I possess
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This app is deployed to github pages. Below are the steps to deploy app on github pages:
+
+* ng build --prod --base-href "https://tavishaggarwal.com/"
+* Add CNAME file to dist folder
+* Add url as 'tavishaggarwal.com' in file created
+* angular-cli-ghpages
 
 ## Built With
 
