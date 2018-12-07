@@ -1,5 +1,6 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import { Component, Input, AfterViewInit, OnInit } from '@angular/core';
 import * as jQuery from 'jquery';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'profile-root',
@@ -7,7 +8,26 @@ import * as jQuery from 'jquery';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
+
+  constructor(private _swUpdate: SwUpdate) {
+
+  }
+
+  ngOnInit(){
+    if (this._swUpdate.isEnabled) {
+      this._swUpdate.available.subscribe(() => {
+          if(confirm("New version of application is available. Do you want to load new Version?")) {
+              window.location.reload();
+          }
+      });
+    } 
+  }
+
+  ngAfterViewInit() {
+    this.toggleRefresh();
+    this.closeNavbar();
+  }
 
  toggle () {
     $('#bodyWrapper').toggleClass('showaside backgroundImage');
@@ -46,10 +66,5 @@ export class AppComponent implements AfterViewInit {
  adjustWidth () {
    $('#bodyWrapper').addClass('showaside backgroundImage');
  }
-
-   ngAfterViewInit() {
-    this.toggleRefresh();
-    this.closeNavbar();
-  }
 }
 
