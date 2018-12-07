@@ -64,10 +64,9 @@ div#bs-example-navbar-collapse-1  {
     background: #0099CC;
 } 
 
-@media (min-width: 768px) {
-.navbar-nav {
-    float: right;
-    margin: 0;
+@media (max-width: 768px) {
+.navigation {
+    top: 91px;
 }
 }
 
@@ -86,4 +85,23 @@ div#bs-example-navbar-collapse-1  {
     top:30px;
     right: 10px;
     position: absolute;
+}
+.visitLink {
+    height: 30px;
+}
+
+.navigation {
+    right: 0;
+    position: absolute;
+    ul {
+        margin-left: 10px;
+    }
+    li {
+        margin-right: 20px;
+    }
+}
+
+.navigationToggle {
+    position: absolute;
+    right: 21px;
 }
