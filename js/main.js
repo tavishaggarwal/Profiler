@@ -173,8 +173,10 @@
 	};
 	scrollWindow();
 
+	$('.navbar-nav>li>a').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
+	});
 	
-
 	var counter = function() {
 		
 		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
