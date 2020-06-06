@@ -5536,7 +5536,6 @@ button.bg-dark:focus {
   display: table-cell !important; }
 
 .d-flex {
-  word-break: break-all;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
@@ -9687,4 +9686,8 @@ textarea.form-control {
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
     -ms-touch-action: auto;
         touch-action: auto;
+}
+
+.break-word {
+  word-break: break-all;
 }
